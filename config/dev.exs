@@ -52,7 +52,7 @@ config :drabdemo, DrabdemoWeb.Endpoint,
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
       ~r{lib/drabdemo_web/views/.*(ex)$},
-      ~r{lib/drabdemo_web/templates/.*(eex)$}
+      ~r{lib/drabdemo_web/templates/.*(eex|drab)$}
     ]
   ]
 

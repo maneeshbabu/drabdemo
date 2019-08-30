@@ -17,6 +17,18 @@ config :drabdemo, DrabdemoWeb.Endpoint,
   render_errors: [view: DrabdemoWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Drabdemo.PubSub, adapter: Phoenix.PubSub.PG2]
 
+# Configures Drab
+config :drab, DrabdemoWeb.Endpoint,
+  otp_app: :drabdemo
+
+# Configures default Drab file extension
+config :phoenix, :template_engines,
+  drab: Drab.Live.Engine
+
+# Configures Drab for webpack
+config :drab, DrabdemoWeb.Endpoint,
+  js_socket_constructor: "window.__socket"
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
